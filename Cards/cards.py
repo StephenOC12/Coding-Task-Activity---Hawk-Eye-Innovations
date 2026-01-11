@@ -6,6 +6,7 @@ class Suit(Enum):
     CLUBS = "♣"
     SPADES = "♠"
 
+#Assign the card values to their name
 class Rank(Enum):
     TWO = 2
     THREE = 3
