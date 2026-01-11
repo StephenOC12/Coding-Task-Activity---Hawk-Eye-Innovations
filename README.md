@@ -38,3 +38,13 @@ Follow the commands on screen
 3bii. Enter easy medium or hard
 
 3c. Select higher or lower inside of the game
+
+
+Why I made certain decisions:
+OOP adds modularity and means it could be reusable/extended for future added games. Making the cards immutable prevents bugs related to cards changing when not wanted. Abstracting the shuffling into different classes allowed for different shuffling in different modes without affecting the Deck class. Creating the ComputerPlayer allowed for an interactive game to be played without requiring a second player. A range of tests, as well as a test plan their results and any further changes are listed inside of the Test_File.xlsx.
+
+Areas for future improvement:
+Implementing additional card games could be made easier with the OOP implementation. In additon for card games like blackjack or poker the use of multiple decks could be beneficial to avoid card counting.
+
+In addition, connecting this to a web app and using the seed based game for online play could be another potential addition. 
+
