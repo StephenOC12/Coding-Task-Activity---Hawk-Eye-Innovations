@@ -1,7 +1,10 @@
 from typing import List
 from Cards.cards import Card, Suit, Rank
 
-
+#Class which represents a standard deck of playing cards
+#In future could be extended to make UNO or add other cards
+#Has functionality to reset the deck, draw cards, return remaining number of cards, .....
+#get a copy of whats currently in the deck and replace the deck with a new list
 class Deck:
     def __init__(self, include_jokers: bool = False):
         self.include_jokers = include_jokers
