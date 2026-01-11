@@ -22,11 +22,11 @@ class Rank(Enum):
     KING = 13
     ACE = 14
 
+#For future extensions
 class BaseCard:
-
     pass
 
-
+#Class represents a card with a suit and rank
 class Card(BaseCard):
     __slots__ = ("_suit", "_rank")
 
@@ -34,6 +34,7 @@ class Card(BaseCard):
         self._suit = suit
         self._rank = rank
 
+    #Cards are immutable
     @property
     def suit(self):
         return self._suit
@@ -41,7 +42,8 @@ class Card(BaseCard):
     @property
     def rank(self):
         return self._rank
-    
+
+    #Output card values
     def __repr__(self):
         return f"{self.rank.name.title()} of {self.suit.name.title()}"
     
