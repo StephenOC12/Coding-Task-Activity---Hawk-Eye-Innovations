@@ -42,11 +42,22 @@ Follow the commands on screen
 
 Why I made certain decisions:
 
-OOP adds modularity and means it could be reusable/extended for future added games. Making the cards immutable prevents bugs related to cards changing when not wanted. Abstracting the shuffling into different classes allowed for different shuffling in different modes without affecting the Deck class. Creating the ComputerPlayer allowed for an interactive game to be played without requiring a second player. A range of tests, as well as a test plan their results and any further changes are listed inside of the Test_File.xlsx.
+Object-Oriented Design: Separating the main aspects of the game for Card, Deck, Shuffler, and ComputerPlayer into classes adds modularity and separation of concerns. This will make it easier for any future additions to this code without having to rewrite the main functionalities.
+
+Immutable Cards: Making the cards immutable prevents bugs related to the cards changing suit or rank whilst the game is going on. This is important for one deck but will be really important upon the implementation of multiple decks.
+
+Shuffler Abstraction: Abstracting the shuffling into different classes allowed for separation of the shuffling from the deck, allowing the logic to be completely separate whilst having the benefit of different shuffling in different modes without affecting the Deck class. 
+
+ComputerPlayer AI: Creating the ComputerPlayer allowed for an interactive game to be played without requiring a second player. The range of difficulties in the AI player makes the game more engaging for a range of users, and allows for future extension (probabilistic look for multiple deck card counting)
+
+Testing: A wide range of manual and automated tests ensures that the key components of the game work as intended as well as making sure that the game still does as intended in edge case. The test plan listed inside of the Test_File.xlsx shows the test descriptions, expected and actual results as well as the required changes in the case of a bug found in testing.
+
 
 Areas for future improvement:
 
-Implementing additional card games could be made easier with the OOP implementation. In additon for card games like blackjack or poker the use of multiple decks could be beneficial to avoid card counting.
+Adding More Card Games: Implementing additional card games could be made easier with the OOP implementation. New games like poker and blackjack could be added without having to change the original logic. In additon for these kinds of games the use of multiple decks could be beneficial to avoid card counting.
 
-In addition, connecting this to a web app and using the seed based game for online play could be another potential addition. 
+Web Integration: In addition, connecting this to a web app could allow for online play. The seed based game could be used for this to allow for fair competitions and not reducing it to pure luck.
+
+Additional Game Features: special cards such as an extra life or additional score given for runs of 5 or 10, etc. could be new fun ways to keep the game fresh. 
 
