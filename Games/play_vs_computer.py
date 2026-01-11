@@ -4,11 +4,13 @@ from Cards.shuffler import RandomShuffler
 import random
 from Cards.cards import Card
 
+#Logic for the computer in vs computer mode
 class ComputerPlayer:
     def __init__(self, difficulty: str):
         self.difficulty = difficulty
         self.seen_cards: list[Card] = []
 
+    #Record the card that was drawn
     def record_card(self, card: Card):
         self.seen_cards.append(card)
 
@@ -42,10 +44,12 @@ class ComputerPlayer:
         if card.rank.value == max_rank:
             return "lower"
 
+        #Create the counts with 4 cards per rank
         rank_counts = {}
         for rank in range(min_rank, max_rank + 1):
             rank_counts[rank] = 4
 
+        #Remove the already seen cards and current
         for seen in self.seen_cards:
             rank_counts[seen.rank.value] -= 1
 
@@ -63,5 +67,6 @@ class ComputerPlayer:
         #Print below can validate that computer is making the correct choice
         #print("higher:", higher_remaining, "lower:", lower_remaining)
 
+        #Pick the option with more in it
         return "higher" if higher_remaining >= lower_remaining else "lower"
 
