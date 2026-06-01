@@ -1,4 +1,4 @@
-Coding Task Activity - Hawk-Eye Innovations
+Higher lower card game 
 
 This project entails of a higher or lower card game implemented in Python. There are multiple different modes, you can play alone, with a friend who uses the same seed or against the computer with a range of difficulties.
 
